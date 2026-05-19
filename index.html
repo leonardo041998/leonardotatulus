@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <title>Leonardo Tatulus | Mobile Developer</title>
+
+  <meta name="keywords" content="Leonardo Tatulus, Mobile Developer, Flutter, React Native, Full Stack" />
+  <meta name="description" content="Portfolio of Leonardo Tatulus | Mobile Developer" />
+  <link rel="icon" type="image/png" href="./assets/devfolio-logo.png" />
+  <meta name="theme-color" content="#36d1dc" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://leonardo041998.github.io/leonardotatulus/" />
+  <meta property="og:title" content="Leonardo Tatulus | Mobile Developer" />
+  <meta property="og:description" content="Hello, I'm Leo and this is my portfolio" />
+  <meta property="og:image" content="https://leonardo041998.github.io/leonardotatulus/assets/portoleo.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://leonardo041998.github.io/leonardotatulus/" />
+  <meta property="twitter:title" content="Leonardo Tatulus | Mobile Developer" />
+  <meta property="twitter:description" content="Hello, I'm Leo and this is my portfolio" />
+  <meta property="twitter:image" content="https://leonardo041998.github.io/leonardotatulus/assets/portoleo.png" />
+
+  <link rel="preload" as="style" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="./javascript/scrollreveal.min.js"></script>
+  <script defer type="text/javascript" src="./javascript/scrollveal.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122228201-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag("js", new Date())
+    gtag("config", "UA-122228201-4")
+  </script>
+
+  <style>
+    /* Image Protection Overlay */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .protected-image {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Modern Text Gradient for Hero Name */
+    .text-color-main.name {
+      background: linear-gradient(90deg, #36d1dc, #5b86e5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+      display: inline-block;
+    }
+
+    /* Skills Box Card UI */
+    .about-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .about-box {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+      flex: 1 1 calc(45% - 20px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      border: 1px solid #f0f0f0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+      border-color: #36d1dc;
+    }
+
+    .about-box__title {
+      color: #2b2b2b !important;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .about-box__content {
+      color: #555555 !important;
+      line-height: 1.6;
+    }
+
+    /* Project Layout and Hover Effect */
+    .project-wrapper .row {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-items: center !important;
+      margin-bottom: 5rem;
+    }
+
+    .project-wrapper__text,
+    .project-wrapper__image {
+      flex: 0 0 50% !important;
+      max-width: 50% !important;
+      padding: 0 15px;
+      box-sizing: border-box;
+    }
+
+    .thumbnail {
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+    }
+
+    .thumbnail img {
+      transition: transform 0.5s ease;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .thumbnail:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Mobile Responsiveness for Projects */
+    @media (max-width: 768px) {
+
+      .project-wrapper__text,
+      .project-wrapper__image {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+      }
+
+      .project-wrapper__image {
+        margin-top: 20px;
+      }
+
+      .about-box {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* Social Links Styling */
+    .social-links a {
+      color: #333;
+      margin: 0 15px;
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .social-links a:hover {
+      color: #36d1dc;
+      transform: translateY(-3px);
+    }
+
+    /* FIX: Ekstra margin bawah agar tidak tertutup widget chat (Lexa) */
+    html,
+    body {
+      padding-bottom: 80px;
+    }
+
+    #contact {
+      padding-bottom: 120px !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="hero">
+    <section class="container">
+      <h1 class="hero-title">
+        Hi, my name is <br>
+        <span class="text-color-main name">Leonardo Tatulus</span>
+        <br />
+        I'm a Mobile Developer.
+      </h1>
+      <p class="hero-cta">
+        <a class="cta-btn cta-btn--hero" href="#about">Get in touch</a>
+      </p>
+    </section>
+    <a href="#about" class="scroll-down-link" aria-label="scroll-down">
+      <div class="scroll-down"></div>
+    </a>
+  </div>
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="row about-wrapper">
+        <div class="about-wrapper__image">
+          <div class="protected-image">
+            <div class="overlay"></div> <img src="./assets/profileleo.png" alt="Profile Image" width="450"
+              height="350" />
+          </div>
+
+          <script>
+            // JavaScript untuk mencegah klik kanan dan drag-and-drop
+            document.addEventListener('contextmenu', event => event.preventDefault());
+            document.addEventListener('dragstart', event => event.preventDefault());
+            document.querySelector('.protected-image img').addEventListener('mousedown', event => event.preventDefault());
+          </script>
+        </div>
+
+        <div class="about-wrapper__info">
+          <p class="about-wrapper__info-text">
+            I am a Technical Consultant and Mobile Developer with 4 years of experience specializing in enterprise-level
+            applications. My core expertise lies in building robust full-stack solutions using React Native, Flutter,
+            NodeJS, and SQL. I have designed and developed impactful systems for warehouse management, port operations,
+            and corporate attendance, frequently implementing offline-first architectures to ensure software reliability
+            in challenging industrial environments.
+          </p>
+          <p class="about-wrapper__info-text">
+            With a background in Information Systems, I am passionate about translating complex business requirements
+            into clean, scalable code. My primary focus is on developing software that directly increases operational
+            efficiency for businesses, ranging from retail asset tracking to mining fleet management systems. I am
+            committed to continuous learning and delivering high-quality technology solutions that create real value.
+          </p>
+          <span class="about-wrapper__cta">
+            <a href="./cv/CV Leonardo Tatulus.pdf" class="cta-btn cta-btn--resume" download>View Resume</a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="row about-wrapper">
+          <div class="about-box" data-tilt>
+            <h3 class="about-box__title"><i class="fa-solid fa-code"></i> Programming Language</h3>
+            <p class="about-box__content">
+              I am proficient in several programming languages including JavaScript, TypeScript, and SQL.
+            </p>
+          </div>
+
+          <div class="about-box" data-tilt>
+            <h3 class="about-box__title"><i class="fa-solid fa-layer-group"></i> Framework</h3>
+            <p class="about-box__content">
+              I have extensive experience working with cross-platform mobile and backend frameworks such as React
+              Native, Flutter, and NodeJS.
+            </p>
+          </div>
+
+          <div class="about-box" data-tilt>
+            <h3 class="about-box__title"><i class="fa-solid fa-database"></i> Database</h3>
+            <p class="about-box__content">
+              I am skilled in database management and backend services, including SQL Server, MySQL, and Supabase.
+            </p>
+          </div>
+
+          <div class="about-box" data-tilt>
+            <h3 class="about-box__title"><i class="fa-solid fa-wrench"></i> Tools</h3>
+            <p class="about-box__content">
+              The tools I use include Visual Studio Code, Android Studio, Git, and various other development tools to
+              support enterprise application development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section id="projects">
+    <div class="container">
+      <div class="project-wrapper">
+        <h2 class="section-title dark-blue-text">Professional Projects</h2>
+
+        <article class="row">
+          <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">Cosmetics and Personal Care Industry</h3>
+            <h6 class="project-wrapper__text-title">Warehouse Management System</h6>
+            <p class="project-wrapper__text-info">
+              Creating an application specifically designed to manage, control, and optimize warehouse operations. Its
+              main goal is to improve efficiency, accuracy, and visibility in storage and inventory management.
+            </p>
+          </div>
+          <div class="project-wrapper__image">
+            <div class="thumbnail rounded">
+              <img src="./assets/warehouse-management.jpg" class="img-fluid" alt="Project Image" width="1366"
+                height="767" />
+            </div>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">Mining Industry</h3>
+            <h6 class="project-wrapper__text-title">PORT Management System</h6>
+            <p class="project-wrapper__text-info">
+              Creating an application specifically designed to manage operations related to the shipping, storage, and
+              handling of coal at ports. This system helps optimize logistics processes and warehouse operations at coal
+              ports.
+            </p>
+          </div>
+          <div class="project-wrapper__image">
+            <div class="thumbnail rounded">
+              <img src="./assets/mining-industry.jpg" class="img-fluid" alt="Project Image" width="1366" height="767" />
+            </div>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">Retail Industry</h3>
+            <h6 class="project-wrapper__text-title">Fixed Asset Opname</h6>
+            <p class="project-wrapper__text-info">
+              Creating an application for recording and verifying fixed assets owned by a company. The purpose of fixed
+              asset opname is to ensure that the company's records of fixed assets correspond to the actual number of
+              assets, and to check the condition and location of the assets.
+            </p>
+          </div>
+          <div class="project-wrapper__image">
+            <div class="thumbnail rounded">
+              <img src="./assets/retail-industry.jpg" class="img-fluid" alt="Project Image" width="500" height="500" />
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!--Projects Section-->
+  <section id="projects">
+    <div class="container">
+      <div class="project-wrapper">
+        <h2 class="section-title dark-blue-text">Freelance Projects</h2>
+
+        <!-- Each .row is a project -->
+        <article class="row">
+          <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">Airport Industry</h3>
+            <h6 class="project-wrapper__text-title">Loyalty Program</h6>
+            <p class="project-wrapper__text-info">
+              The airport loyalty program is an initiative designed to reward passengers or loyal users of airport
+              services. This
+              program aims to enhance customer satisfaction, encourage repeat visits, and strengthen the relationship
+              between
+              customers and the airport or its partners. In this program, every purchase made at the airport will earn
+              points that can
+              be exchanged for specific rewards.
+            </p>
+            <!-- <div class="project-wrapper__text-btns">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">See
+                  Live</a>
+                <a href="#" target="_blank" class="cta-btn text-color-main">Source Code</a>
+              </div> -->
+          </div>
+
+          <div class="project-wrapper__image">
+            <!-- <a href="#" target="_blank" rel="noopener noreferrer"> -->
+            <div class="thumbnail rounded">
+              <img src="./assets/eatshopfly.png" class="img-fluid" alt="Project Image" width="1366" height="767" />
+            </div>
+            <!-- </a> -->
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">Community Management</h3>
+            <h6 class="project-wrapper__text-title">WargaHub</h6>
+            <p class="project-wrapper__text-info">
+              Developed a community management application built with Flutter. WargaHub is designed to facilitate
+              communication,
+              manage residential administrative tasks, and foster a connected neighborhood environment.
+            </p>
+          </div>
+
+          <div class="project-wrapper__image">
+            <div class="thumbnail rounded">
+              <img src="./assets/wargahub.png" class="img-fluid" alt="WargaHub Application" width="1366" height="767" />
+            </div>
+          </div>
+        </article>
+        <!-- /END Project -->
+
+
+        <!-- /END Project -->
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <div class="container">
+      <a href="#hero" class="back-to-top" aria-label="go back to top">
+        <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+      </a>
+      <div class="social-links">
+        <div class="container">
+          <h2 class="section-title">Contact</h2>
+
+          <div class="social-links" style="text-align: center;">
+            <a href="https://www.instagram.com/llleonardo4/" target="_blank" rel="noopener noreferrer"
+              aria-label="instagram">
+              <i class="fa-brands fa-instagram fa-2x"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/leonardotatulus" target="_blank" rel="noopener noreferrer"
+              aria-label="linkedin">
+              <i class="fa-brands fa-linkedin fa-2x"></i>
+            </a>
+
+            <a href="https://wa.me/6289647235016" target="_blank" rel="noopener noreferrer" aria-label="whatsapp">
+              <i class="fa-brands fa-whatsapp fa-2x"></i>
+            </a>
+          </div>
+          <hr style="margin-top: 20px; border-color: #eee;" />
+          <p class="footer__text" style="text-align: center; margin-top: 10px;">
+            &copy; <span id="year"></span> - Leonardo Tatulus
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear()
+  </script>
+  <script src="./javascript/vanilla-tilt.min.js"></script>
+  <script type="text/javascript" src="./javascript/valtilt.js"></script>
+</body>
+
+</html>
