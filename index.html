@@ -186,6 +186,26 @@
     #contact {
       padding-bottom: 120px !important;
     }
+
+    /* Tech Stack Chips */
+    .tech-chip {
+      display: inline-block;
+      background-color: #f0f4f8;
+      color: #36d1dc;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-right: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #e1e8ed;
+      transition: all 0.3s ease;
+    }
+
+    .tech-chip:hover {
+      background-color: #36d1dc;
+      color: #ffffff;
+    }
   </style>
 </head>
 
@@ -196,7 +216,7 @@
         Hi, my name is <br>
         <span class="text-color-main name">Leonardo Tatulus</span>
         <br />
-        I'm a Mobile Developer.
+        I'm a Fullstack Developer.
       </h1>
       <p class="hero-cta">
         <a class="cta-btn cta-btn--hero" href="#about">Get in touch</a>
@@ -226,17 +246,10 @@
 
         <div class="about-wrapper__info">
           <p class="about-wrapper__info-text">
-            I am a Technical Consultant and Mobile Developer with 4 years of experience specializing in enterprise-level
-            applications. My core expertise lies in building robust full-stack solutions using React Native, Flutter,
-            NodeJS, and SQL. I have designed and developed impactful systems for warehouse management, port operations,
-            and corporate attendance, frequently implementing offline-first architectures to ensure software reliability
-            in challenging industrial environments.
+            I am currently working as a Fullstack Developer in the banking industry, where security and high performance are paramount. Prior to this role, I spent several years developing enterprise grade systems for warehouse management, retail, and port logistics. Bringing 4 years of comprehensive software engineering experience, my core expertise lies in crafting robust solutions using Flutter, React Native, Node.js, and SQL/NoSQL databases, frequently implementing secure offline first architectures for mission critical environments.
           </p>
           <p class="about-wrapper__info-text">
-            With a background in Information Systems, I am passionate about translating complex business requirements
-            into clean, scalable code. My primary focus is on developing software that directly increases operational
-            efficiency for businesses, ranging from retail asset tracking to mining fleet management systems. I am
-            committed to continuous learning and delivering high-quality technology solutions that create real value.
+            With a solid background in Information Systems, I am deeply passionate about translating complex business requirements into clean, scalable, and maintainable code. Beyond enterprise projects, I actively develop innovative independent applications such as community management platforms and personal finance tools utilizing modern tech stacks like Supabase, Firebase, and local databases (Drift/SQLite). I am committed to continuous learning and delivering high quality technology solutions that create tangible value for users and businesses alike.
           </p>
           <span class="about-wrapper__cta">
             <a href="./cv/CV Leonardo Tatulus.pdf" class="cta-btn cta-btn--resume" download>View Resume</a>
@@ -380,11 +393,19 @@
           <div class="project-wrapper__text">
             <h3 class="project-wrapper__text-title">Community Management</h3>
             <h6 class="project-wrapper__text-title">WargaHub</h6>
+            <div style="margin-bottom: 15px;">
+              <span class="tech-chip">Flutter</span>
+              <span class="tech-chip">Firebase</span>
+              <span class="tech-chip">Node.js</span>
+            </div>
             <p class="project-wrapper__text-info">
               Developed a community management application built with Flutter. WargaHub is designed to facilitate
               communication,
               manage residential administrative tasks, and foster a connected neighborhood environment.
             </p>
+            <div class="project-wrapper__text-btns" style="margin-top: 20px;">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects"><i class="fa-solid fa-play"></i> Watch Video Demo</a>
+            </div>
           </div>
 
           <div class="project-wrapper__image">
@@ -394,6 +415,35 @@
           </div>
         </article>
         <!-- /END Project -->
+
+        <!-- Project AdaBudget -->
+        <article class="row">
+          <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">Personal Finance</h3>
+            <h6 class="project-wrapper__text-title">AdaBudget</h6>
+            <div style="margin-bottom: 15px;">
+              <span class="tech-chip">Flutter</span>
+              <span class="tech-chip">Drift (SQLite)</span>
+              <span class="tech-chip">Supabase</span>
+              <span class="tech-chip">Offline First</span>
+            </div>
+            <p class="project-wrapper__text-info">
+              An offline first personal finance application that guarantees user data privacy by storing data locally on the device (via SQLite).
+              It seamlessly synchronizes with a cloud backend (Supabase) in the background to prevent data loss. Features include budgeting, expense tracking, and real time dashboard analytics.
+            </p>
+            <div class="project-wrapper__text-btns" style="margin-top: 20px;">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects"><i class="fa-solid fa-play"></i> Watch Video Demo</a>
+            </div>
+          </div>
+
+          <div class="project-wrapper__image">
+            <div class="thumbnail rounded">
+              <!-- Ganti gambar ini dengan screenshot AdaBudget asli milik Anda -->
+              <img src="./assets/adabudget.png" class="img-fluid" alt="AdaBudget Application" width="1366" height="767" style="background: #eef2f3; padding: 20px; box-sizing: border-box;" />
+            </div>
+          </div>
+        </article>
+        <!-- /END Project AdaBudget -->
 
 
         <!-- /END Project -->
