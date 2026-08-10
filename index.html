@@ -206,6 +206,35 @@
       background-color: #36d1dc;
       color: #ffffff;
     }
+
+    /* Skills Grid */
+    .skill-item {
+      text-align: center;
+      font-size: 3.5rem;
+      color: #5b86e5;
+      transition: transform 0.3s ease;
+      width: 100px;
+    }
+    .skill-item:hover {
+      transform: scale(1.15);
+      color: #36d1dc;
+    }
+    .skill-item p {
+      font-size: 1rem;
+      margin-top: 8px;
+      color: #555;
+      font-weight: 600;
+    }
+
+    /* Typing Cursor */
+    .cursor {
+      animation: blink 1s step-end infinite;
+      color: #5b86e5;
+      font-weight: bold;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
   </style>
 </head>
 
@@ -216,7 +245,7 @@
         Hi, my name is <br>
         <span class="text-color-main name">Leonardo Tatulus</span>
         <br />
-        I'm a Fullstack Developer.
+        I'm a <span class="typing-text"></span><span class="cursor">|</span>
       </h1>
       <p class="hero-cta">
         <a class="cta-btn cta-btn--hero" href="#about">Get in touch</a>
@@ -246,10 +275,10 @@
 
         <div class="about-wrapper__info">
           <p class="about-wrapper__info-text">
-            I am currently working as a Fullstack Developer in the banking industry, where security and high performance are paramount. Prior to this role, I spent several years developing enterprise grade systems for warehouse management, retail, and port logistics. Bringing 4 years of comprehensive software engineering experience, my core expertise lies in crafting robust solutions using Flutter, React Native, Node.js, and SQL/NoSQL databases, frequently implementing secure offline first architectures for mission critical environments.
+            I am currently working as a Fullstack Developer in the banking industry, where security and high performance are paramount. In this role, I actively develop and maintain mission-critical applications using <strong>Angular</strong> and <strong>Java Spring Boot</strong>, while leveraging tools like <strong>GitLab, Jira, and Confluence</strong> for CI/CD and agile project management. Prior to this role, I spent several years developing enterprise-grade systems for warehouse management, retail, and port logistics.
           </p>
           <p class="about-wrapper__info-text">
-            With a solid background in Information Systems, I am deeply passionate about translating complex business requirements into clean, scalable, and maintainable code. Beyond enterprise projects, I actively develop innovative independent applications such as community management platforms and personal finance tools utilizing modern tech stacks like Supabase, Firebase, and local databases (Drift/SQLite). I am committed to continuous learning and delivering high quality technology solutions that create tangible value for users and businesses alike.
+            Bringing 4 years of comprehensive software engineering experience, my core expertise also includes crafting robust solutions using Flutter, React Native, Node.js, and SQL/NoSQL databases, frequently implementing secure offline-first architectures for various environments. Beyond enterprise projects, I actively develop innovative independent applications such as community management platforms and personal finance tools utilizing modern tech stacks like Supabase, Firebase, and local databases (Drift/SQLite). I am committed to continuous learning and delivering high-quality technology solutions that create tangible value for users and businesses alike.
           </p>
           <span class="about-wrapper__cta">
             <a href="./cv/CV Leonardo Tatulus.pdf" class="cta-btn cta-btn--resume" download>View Resume</a>
@@ -261,35 +290,25 @@
     <section>
       <div class="container">
         <h2 class="section-title">Skills</h2>
-        <div class="row about-wrapper">
-          <div class="about-box" data-tilt>
-            <h3 class="about-box__title"><i class="fa-solid fa-code"></i> Programming Language</h3>
-            <p class="about-box__content">
-              I am proficient in several programming languages including JavaScript, TypeScript, and SQL.
-            </p>
-          </div>
-
-          <div class="about-box" data-tilt>
-            <h3 class="about-box__title"><i class="fa-solid fa-layer-group"></i> Framework</h3>
-            <p class="about-box__content">
-              I have extensive experience working with cross-platform mobile and backend frameworks such as React
-              Native, Flutter, and NodeJS.
-            </p>
-          </div>
-
-          <div class="about-box" data-tilt>
-            <h3 class="about-box__title"><i class="fa-solid fa-database"></i> Database</h3>
-            <p class="about-box__content">
-              I am skilled in database management and backend services, including SQL Server, MySQL, and Supabase.
-            </p>
-          </div>
-
-          <div class="about-box" data-tilt>
-            <h3 class="about-box__title"><i class="fa-solid fa-wrench"></i> Tools</h3>
-            <p class="about-box__content">
-              The tools I use include Visual Studio Code, Android Studio, Git, and various other development tools to
-              support enterprise application development.
-            </p>
+        <div style="display: flex; justify-content: center; width: 100%;">
+          <div class="about-box" data-tilt style="width: 100%; max-width: 900px; padding: 40px;">
+            <h3 class="about-box__title" style="text-align: center; margin-bottom: 30px; font-size: 1.5rem;"><i class="fa-solid fa-code"></i> Tech Stack & Tools</h3>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-bottom: 20px;">
+              <div class="skill-item"><i class="fa-brands fa-angular"></i><p>Angular</p></div>
+              <div class="skill-item"><i class="fa-brands fa-java"></i><p>Spring Boot</p></div>
+              <div class="skill-item"><i class="fa-brands fa-gitlab"></i><p>GitLab</p></div>
+              <div class="skill-item"><i class="fa-brands fa-jira"></i><p>Jira</p></div>
+              <div class="skill-item"><i class="fa-brands fa-confluence"></i><p>Confluence</p></div>
+              <div class="skill-item"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
+              <div class="skill-item"><i class="fa-solid fa-file-code"></i><p>TypeScript</p></div>
+              <div class="skill-item"><i class="fa-brands fa-react"></i><p>React Native</p></div>
+              <div class="skill-item"><i class="fa-solid fa-mobile-screen"></i><p>Flutter</p></div>
+              <div class="skill-item"><i class="fa-brands fa-node"></i><p>Node.js</p></div>
+              <div class="skill-item"><i class="fa-brands fa-laravel"></i><p>Laravel</p></div>
+              <div class="skill-item"><i class="fa-solid fa-database"></i><p>SQL / MySQL</p></div>
+              <div class="skill-item"><i class="fa-solid fa-server"></i><p>Supabase</p></div>
+              <div class="skill-item"><i class="fa-brands fa-git-alt"></i><p>Git</p></div>
+            </div>
           </div>
         </div>
       </div>
@@ -308,11 +327,13 @@
               Creating an application specifically designed to manage, control, and optimize warehouse operations. Its
               main goal is to improve efficiency, accuracy, and visibility in storage and inventory management.
             </p>
+            <div class="project-wrapper__text-btns" style="margin-top: 20px;">
+                <a href="javascript:alert('This is a confidential enterprise project. Please contact me via email for an in-depth case study.')" class="cta-btn cta-btn--hero cta-btn--projects"><i class="fa-solid fa-lock"></i> Read Case Study</a>
+            </div>
           </div>
           <div class="project-wrapper__image">
             <div class="thumbnail rounded">
-              <img src="./assets/warehouse-management.jpg" class="img-fluid" alt="Project Image" width="1366"
-                height="767" />
+              <img src="./assets/warehouse-management.jpg" class="img-fluid" alt="Dashboard interface of Warehouse Management System" width="1366" height="767" />
             </div>
           </div>
         </article>
@@ -326,10 +347,13 @@
               handling of coal at ports. This system helps optimize logistics processes and warehouse operations at coal
               ports.
             </p>
+            <div class="project-wrapper__text-btns" style="margin-top: 20px;">
+                <a href="javascript:alert('This is a confidential enterprise project. Please contact me via email for an in-depth case study.')" class="cta-btn cta-btn--hero cta-btn--projects"><i class="fa-solid fa-lock"></i> Read Case Study</a>
+            </div>
           </div>
           <div class="project-wrapper__image">
             <div class="thumbnail rounded">
-              <img src="./assets/mining-industry.jpg" class="img-fluid" alt="Project Image" width="1366" height="767" />
+              <img src="./assets/mining-industry.jpg" class="img-fluid" alt="Dashboard interface of PORT Management System for coal handling" width="1366" height="767" />
             </div>
           </div>
         </article>
@@ -343,10 +367,13 @@
               asset opname is to ensure that the company's records of fixed assets correspond to the actual number of
               assets, and to check the condition and location of the assets.
             </p>
+            <div class="project-wrapper__text-btns" style="margin-top: 20px;">
+                <a href="javascript:alert('This is a confidential enterprise project. Please contact me via email for an in-depth case study.')" class="cta-btn cta-btn--hero cta-btn--projects"><i class="fa-solid fa-lock"></i> Read Case Study</a>
+            </div>
           </div>
           <div class="project-wrapper__image">
             <div class="thumbnail rounded">
-              <img src="./assets/retail-industry.jpg" class="img-fluid" alt="Project Image" width="500" height="500" />
+              <img src="./assets/retail-industry.jpg" class="img-fluid" alt="Mobile UI of Fixed Asset Opname application" width="500" height="500" />
             </div>
           </div>
         </article>
@@ -445,6 +472,34 @@
         </article>
         <!-- /END Project AdaBudget -->
 
+        <!-- Project OnlineShop -->
+        <article class="row">
+          <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">E-Commerce Platform</h3>
+            <h6 class="project-wrapper__text-title">OnlineShop</h6>
+            <div style="margin-bottom: 15px;">
+              <span class="tech-chip">Laravel 10</span>
+              <span class="tech-chip">Filament v3</span>
+              <span class="tech-chip">Livewire</span>
+              <span class="tech-chip">Midtrans</span>
+            </div>
+            <p class="project-wrapper__text-info">
+              A comprehensive e-commerce platform built with Laravel. It features seamless payment integration via Midtrans, a dynamic shopping cart, and an elegant administrative dashboard using Filament for managing products, orders, and role-based access control.
+            </p>
+            <div class="project-wrapper__text-btns" style="margin-top: 20px;">
+                <a href="https://youtu.be/hA_w4fBx-oU" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects"><i class="fa-solid fa-play"></i> Watch Video Demo</a>
+            </div>
+          </div>
+
+          <div class="project-wrapper__image">
+            <div class="thumbnail rounded">
+              <!-- Replace this image with your actual OnlineShop screenshot -->
+              <img src="./assets/onlineshop.png" class="img-fluid" alt="OnlineShop Application" width="1366" height="767" style="background: #eef2f3; padding: 20px; box-sizing: border-box;" />
+            </div>
+          </div>
+        </article>
+        <!-- /END Project OnlineShop -->
+
 
         <!-- /END Project -->
       </div>
@@ -462,6 +517,10 @@
           <h2 class="section-title">Contact</h2>
 
           <div class="social-links" style="text-align: center;">
+            <a href="mailto:leonardotatulus04@gmail.com" aria-label="email">
+              <i class="fa-solid fa-envelope fa-2x"></i>
+            </a>
+
             <a href="https://www.instagram.com/llleonardo4/" target="_blank" rel="noopener noreferrer"
               aria-label="instagram">
               <i class="fa-brands fa-instagram fa-2x"></i>
@@ -489,6 +548,51 @@
   </script>
   <script src="./javascript/vanilla-tilt.min.js"></script>
   <script type="text/javascript" src="./javascript/valtilt.js"></script>
+  <script>
+    // Typing Animation for Hero
+    const words = ["Fullstack Developer.", "Mobile Developer.", "Backend Developer."];
+    let i = 0;
+    let timer;
+    const typingText = document.querySelector(".typing-text");
+
+    function typeEffect() {
+      if(!typingText) return;
+      let word = words[i].split("");
+      var loopTyping = function() {
+        if (word.length > 0) {
+          typingText.innerHTML += word.shift();
+        } else {
+          setTimeout(deletingEffect, 2500);
+          return false;
+        }
+        timer = setTimeout(loopTyping, 120);
+      };
+      loopTyping();
+    }
+
+    function deletingEffect() {
+      let word = words[i].split("");
+      var loopDeleting = function() {
+        if (word.length > 0) {
+          word.pop();
+          typingText.innerHTML = word.join("");
+        } else {
+          if (words.length > (i + 1)) {
+            i++;
+          } else {
+            i = 0;
+          }
+          typeEffect();
+          return false;
+        }
+        timer = setTimeout(loopDeleting, 60);
+      };
+      loopDeleting();
+    }
+    
+    // Start typing
+    typeEffect();
+  </script>
 </body>
 
 </html>
