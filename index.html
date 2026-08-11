@@ -5,7 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
   <title>Leonardo Tatulus | Fullstack & Mobile Developer</title>
@@ -44,211 +46,24 @@
     gtag("config", "UA-122228201-4")
   </script>
 
-  <style>
-    /* Image Protection Overlay */
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
 
-    .protected-image {
-      position: relative;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* Modern Text Gradient for Hero Name */
-    .text-color-main.name {
-      background: linear-gradient(90deg, #36d1dc, #5b86e5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 800;
-      display: inline-block;
-    }
-
-    /* Skills Box Card UI */
-    .about-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
-    }
-
-    .about-box {
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 20px;
-      flex: 1 1 calc(45% - 20px);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      border: 1px solid #f0f0f0;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .about-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-      border-color: #36d1dc;
-    }
-
-    .about-box__title {
-      color: #2b2b2b !important;
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-    }
-
-    .about-box__content {
-      color: #555555 !important;
-      line-height: 1.6;
-    }
-
-    /* Project Layout and Hover Effect */
-    .project-wrapper .row {
-      display: flex !important;
-      flex-wrap: wrap !important;
-      align-items: center !important;
-      margin-bottom: 5rem;
-    }
-
-    .project-wrapper__text,
-    .project-wrapper__image {
-      flex: 0 0 50% !important;
-      max-width: 50% !important;
-      padding: 0 15px;
-      box-sizing: border-box;
-    }
-
-    .thumbnail {
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      width: 100%;
-    }
-
-    .thumbnail img {
-      transition: transform 0.5s ease;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    .thumbnail:hover img {
-      transform: scale(1.05);
-    }
-
-    /* Mobile Responsiveness for Projects */
-    @media (max-width: 768px) {
-
-      .project-wrapper__text,
-      .project-wrapper__image {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-      }
-
-      .project-wrapper__image {
-        margin-top: 20px;
-      }
-
-      .about-box {
-        flex: 1 1 100%;
-      }
-    }
-
-    /* Social Links Styling */
-    .social-links a {
-      color: #333;
-      margin: 0 15px;
-      transition: color 0.3s ease, transform 0.3s ease;
-      display: inline-block;
-    }
-
-    .social-links a:hover {
-      color: #36d1dc;
-      transform: translateY(-3px);
-    }
-
-    /* FIX: Ekstra margin bawah agar tidak tertutup widget chat (Lexa) */
-    html,
-    body {
-      padding-bottom: 80px;
-    }
-
-    #contact {
-      padding-bottom: 120px !important;
-    }
-
-    /* Tech Stack Chips */
-    .tech-chip {
-      display: inline-block;
-      background-color: #f0f4f8;
-      color: #36d1dc;
-      padding: 5px 12px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-right: 8px;
-      margin-bottom: 10px;
-      border: 1px solid #e1e8ed;
-      transition: all 0.3s ease;
-    }
-
-    .tech-chip:hover {
-      background-color: #36d1dc;
-      color: #ffffff;
-    }
-
-    /* Skills Grid */
-    .skill-item {
-      text-align: center;
-      font-size: 3.5rem;
-      color: #5b86e5;
-      transition: transform 0.3s ease;
-      width: 100px;
-    }
-    .skill-item:hover {
-      transform: scale(1.15);
-      color: #36d1dc;
-    }
-    .skill-item p {
-      font-size: 1rem;
-      margin-top: 8px;
-      color: #555;
-      font-weight: 600;
-    }
-
-    /* Typing Cursor */
-    .cursor {
-      animation: blink 1s step-end infinite;
-      color: #5b86e5;
-      font-weight: bold;
-    }
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-  </style>
 </head>
 
 <body>
   <div id="hero">
-    <section class="container">
+    <!-- Glowing animated background blob -->
+    <div class="hero-glow"></div>
+    <section class="container" style="position: relative; z-index: 2;">
+      <div class="hero-badge">
+        <i class="fa-solid fa-code"></i> Crafting Digital Experiences
+      </div>
       <h1 class="hero-title">
-        Hi, my name is <br>
+        <span>Hi, my name is</span>
         <span class="text-color-main name">Leonardo Tatulus</span>
-        <br />
-        I'm a <span class="typing-text"></span><span class="cursor">|</span>
+        <span>I'm a <span class="typing-text"></span><span class="cursor">|</span></span>
       </h1>
       <p class="hero-cta">
-        <a class="cta-btn cta-btn--hero" href="#about">Get in touch</a>
+        <a class="cta-btn cta-btn--hero" href="#about">Get in touch <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
       </p>
     </section>
     <a href="#about" class="scroll-down-link" aria-label="scroll-down">
@@ -330,7 +145,7 @@
               main goal is to improve efficiency, accuracy, and visibility in storage and inventory management.
             </p>
             <div class="project-wrapper__text-btns" style="margin-top: 20px;">
-                <a href="javascript:alert('This is a confidential enterprise project. Please contact me via email for an in-depth case study.')" class="cta-btn cta-btn--hero cta-btn--projects"><i class="fa-solid fa-lock"></i> Read Case Study</a>
+                <a href="javascript:openModal('Warehouse Management System', 'This is a confidential enterprise project designed to manage, control, and optimize warehouse operations. Please contact me via email for an in-depth case study and technical demonstration.')" class="cta-btn cta-btn--hero cta-btn--projects"><i class="fa-solid fa-lock"></i> Read Case Study</a>
             </div>
           </div>
           <div class="project-wrapper__image">
@@ -350,7 +165,7 @@
               ports.
             </p>
             <div class="project-wrapper__text-btns" style="margin-top: 20px;">
-                <a href="javascript:alert('This is a confidential enterprise project. Please contact me via email for an in-depth case study.')" class="cta-btn cta-btn--hero cta-btn--projects"><i class="fa-solid fa-lock"></i> Read Case Study</a>
+                <a href="javascript:openModal('PORT Management System', 'This is a highly confidential enterprise system for managing operations related to the shipping, storage, and handling of coal at ports. Please contact me directly for project details.')" class="cta-btn cta-btn--hero cta-btn--projects"><i class="fa-solid fa-lock"></i> Read Case Study</a>
             </div>
           </div>
           <div class="project-wrapper__image">
@@ -370,7 +185,7 @@
               assets, and to check the condition and location of the assets.
             </p>
             <div class="project-wrapper__text-btns" style="margin-top: 20px;">
-                <a href="javascript:alert('This is a confidential enterprise project. Please contact me via email for an in-depth case study.')" class="cta-btn cta-btn--hero cta-btn--projects"><i class="fa-solid fa-lock"></i> Read Case Study</a>
+                <a href="javascript:openModal('Fixed Asset Opname', 'This enterprise application records and verifies fixed assets owned by a company. Due to NDA restrictions, full technical details are available upon request.')" class="cta-btn cta-btn--hero cta-btn--projects"><i class="fa-solid fa-lock"></i> Read Case Study</a>
             </div>
           </div>
           <div class="project-wrapper__image">
@@ -378,13 +193,7 @@
               <img src="./assets/retail.jpg" class="img-fluid" alt="Mobile UI of Fixed Asset Opname application" width="500" height="500" />
             </div>
           </div>
-        </article>
       </div>
-    </div>
-  </section>
-  <!--Projects Section-->
-  <section id="projects">
-    <div class="container">
       <div class="project-wrapper">
         <h2 class="section-title dark-blue-text">Freelance & Personal Projects</h2>
 
@@ -549,6 +358,9 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear()
   </script>
+  <!-- Animations -->
+  <script src="./javascript/scrollreveal.min.js"></script>
+  <script type="text/javascript" src="./javascript/scrollveal.js"></script>
   <script src="./javascript/vanilla-tilt.min.js"></script>
   <script type="text/javascript" src="./javascript/valtilt.js"></script>
   <script>
@@ -595,6 +407,35 @@
     
     // Start typing
     typeEffect();
+  </script>
+
+  <!-- MODAL SYSTEM HTML -->
+  <div class="modal-overlay" id="projectModal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <i class="fa-solid fa-xmark modal-close" onclick="closeModal()"></i>
+      <i class="fa-solid fa-shield-halved modal-icon"></i>
+      <h3 class="modal-title" id="modalTitle">Project Title</h3>
+      <p class="modal-text" id="modalDesc">Project Description</p>
+      <a href="mailto:leonardo041998@gmail.com" class="cta-btn cta-btn--hero">Contact Me</a>
+    </div>
+  </div>
+
+  <script>
+    function openModal(title, desc) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalDesc').innerText = desc;
+      document.getElementById('projectModal').classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    function closeModal(event) {
+      // Only close if clicking the X or the overlay outside the modal content
+      if (event && event.target !== document.getElementById('projectModal') && !event.target.classList.contains('modal-close')) {
+        return;
+      }
+      document.getElementById('projectModal').classList.remove('active');
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    }
   </script>
 </body>
 
